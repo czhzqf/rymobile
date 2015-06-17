@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+<!-- 首页账户 -->
+<div class="accounts-box">
+  <div class="accounts">
+    <div class="accounts-menu">
+      <p class="cur menu1">月账户</p>
+      <p>季账户</p>
+      <p>半年账户</p>
+      <p>年账户</p>
+    </div>
+  </div>
+  <div class="accounts-main">
+    <aside class="accounts-rows">
+      <p class="accounts-rows1 font-18">锁定期限 <em class="font-30">1</em> 个月</p>
+      <img src="images/accounts-month.png" alt="月账户">
+      <p class=" font-45 accounts-rows2"><em class="font-63">10</em>.0%</p>
+      <p class=" font-25 accounts-rows3">年化收益率</p>
+    </aside>
+    <aside class="accounts-rows" style="display: none;">
+      <p class="accounts-rows1 font-18">锁定期限 <em class="font-30">3</em> 个月</p>
+      <img src="images/advantage-quarter.png" alt="季账户">
+      <p class=" font-45 accounts-rows2"><em class="font-63">12</em>.0%</p>
+      <p class=" font-25 accounts-rows3">年化收益率</p>
+    </aside>
+    <aside class="accounts-rows" style="display: none;">
+      <p class=" accounts-rows1 font-18">锁定期限 <em class="font-30">6</em> 个月</p>
+      <img src="images/advantage-half.png" alt="半年账户">
+      <p class=" font-45 accounts-rows2"><em class="font-63">13</em>.5%</p>
+      <p class=" font-25 accounts-rows3">年化收益率</p>
+    </aside>
+    <aside class="accounts-rows" style="display: none;">
+      <p class=" accounts-rows1 font-18">锁定期限 <em class="font-30">12</em> 个月</p>
+      <img src="images/advantage-year.png" alt="年账户">
+      <p class=" font-45 accounts-rows2"><em class="font-63">15</em>.0%</p>
+      <p class=" font-25 accounts-rows3">年化收益率</p>
+    </aside>
+  </div>
+</div>
+<!--@ 首页账户 --> 
+<script type="text/javascript">
+$(function(){	
+	$('.accounts-box .accounts-menu p').click(function(){
+		$(this).addClass('cur').siblings().removeClass('cur');
+		$('.accounts-main>aside:eq('+$(this).index()+')').show().siblings().hide();	
+	})
+})
+</script> 
+
+<!-- 首页-底部 -->
+<aside class="clb accounts-bottom">
+  <div class="accounts-bottom-colum"><i><img alt="" src="images/bottom-ico1.png"/></i>
+    <p>30天定期</p>
+  </div>
+  <div class="accounts-bottom-colum"><i><img alt="" src="images/bottom-ico2.png"/></i>
+    <p>1000元起购</p>
+  </div>
+  <div class="accounts-bottom-colum"><i><img alt="" src="images/bottom-ico3.png"/></i>
+    <p>本息保障</p>
+  </div>
+</aside>
+<aside class="submit"> <a title="马上买入" href="buy.html">马上买入</a> </aside>
+<footer>
+  <aside> <a title="产品首页" href="index.html">产品首页</a><a title="" href="#">|</a><a title="安全保障" href="ry-safe.html">安全保障</a><a title="" href="ry-about.html">|</a><a title="走进睿银" href="ry-about.html">走进睿银</a><a title="" href="#">|</a><a class="login" title="登录" href="ry-login.html">登录/</a><a class="login" title="注册" href="ry-reg.html">注册</a> </aside>
+</footer>
+<!--@ 首页-底部 -->
+</body>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>

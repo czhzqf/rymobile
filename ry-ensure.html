@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+<div class="ry-safe-box">
+  <section class="ry-safe">
+    <aside class="ry-safe-tit"><a title="返回" href="ry-safe.html"><img alt="" src="images/return.png"/></a>三重保障</aside>
+    <aside class="ry-safe-img"><img alt="" src="images/ensure.png" /></aside>
+    <div class="page-info">
+      <aside>第一重本金保障</aside>
+      <p>平台每笔业务成交时，提取一定比例的金额放入“风险备用金”账户，借款出现预期时，根据“风险备用金账户使用规则”，通过“风险备用金”向投资人垫付此笔借款的剩余出借本金或本息。</p>
+      <aside>第二重法律保障</aside>
+      <p>睿银平台坚守政策法规，明确平台的中介性质，不设资金池，不发布虚假标的，在具有极强公信力的机构严格监督下，发挥三网合一的优势，致力于“零”风险模式运作。</p>
+      <aside>第三重第三方资金托管</aside>
+      <p>客户投资不通过我公司账户划付，而是第三方支付公司接收客户投资、提现指令后操作。第三方资管公司将第一时间回收投资人所持债权，垫付投资人的投资本息，将投资人完全隔离在偿付风险之外，以保障平台投资环境和谐稳定。</p>
+    </div>
+  </section>
+</div>
+</body>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="buy">
+	<section class="buy-date">
+    	<aside>
+        	<span>锁定期</span><span class="colum2">到期日</span><span class="colum3">手续费</span>
+        </aside>
+        <aside>
+        	<span class="color-14ae67">1个月</span><span class="colum2">2015-05-30</span><span>0元</span>
+        </aside>
+        <p>到期自动还本付息</p>
+    </section>
+    <section class="buy-money">
+    	<aside class="balance">
+        	<span class="fr">0.41</span><span>账户余额（元）</span>
+        </aside>
+        <aside class="money">
+        	<span>买入金额</span> <div class="money-text"><input type="text" value=""><em>最低1000起投</em><p>可投金额：￥<i>0.00</i></p></div>            
+        </aside>
+        <aside class="income">
+        	<span class="fr color-a09f9f">输入买入金额后显示</span><span>预期收益（元）</span>           
+        </aside>
+    </section>
+    <section class="buy-bottom">
+    	<p class="agreen"><input type="checkbox">&nbsp;我已经阅读并同意<a title="睿银理财服务协议" href="#">《睿银理财服务协议》</a></p>
+        <aside class="buy-btn"><a title="立即买入" href="#">立即买入</a></aside>
+        <aside class="buy-link">
+        	<a title="产品首页" href="index.html">产品首页</a><a title="" href="#">|</a><a title="我的账户" href="admin.html">我的账户</a><a title="" href="#">|</a><a title="安全保障" href="ry-safe.html">安全保障</a><a title="" href="#">|</a><a title="走进睿银" href="ry-about.html">走进睿银</a>
+        </aside>
+    </section>
+    
+
+</body>
+<script type="text/javascript">
+	$(function(){
+	
+		$(".nav p").click(function(){
+			var ul=$(".new");
+			if(ul.css("display")=="none"){
+				ul.slideDown();
+			}else{
+				ul.slideUp();
+			}
+		});
+		$(".nav li").click(function(){
+			var li=$(this).text();
+			$(".nav p").html(li);
+			$(".new").hide();
+			/*$(".set").css({background:'none'});*/
+			$("p").removeClass("select") ;   
+		});
+	})
+</script>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>

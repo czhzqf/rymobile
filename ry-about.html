@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="ry-reg-box">
+ <div class="ry-safe-box">
+  <section class="ry-safe">
+    <aside class="ry-safe-tit"><a title="返回" href="index.html"><img alt="" src="images/return.png"/></a>关于睿银</aside>
+  </section>
+    <aside class="ry-about-img"><img alt="" src="images/ryabout.png" /></aside>
+    <aside class="ry-about">睿银财富互联网金融理财平台于2013年11月正式成立上线，旗下员工120余人，公司遵守相关政策法规的前提下，依托于睿银财富风审团队及实操经
+验，结合先进的互联网技术与我国个人信用现状，为客户提供线上理财、线下审核的安全理财新模式。致力于为投资者与融资者构建一个高效、透明、安
+全、互惠互助的网络投融资平台，严格的风控手段和领先的资产配置理念，不断的帮助中小企业及个人客户提供专业可信赖的服务，实现资产持续增值
+的目标。</aside>
+</div>
+</body>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>

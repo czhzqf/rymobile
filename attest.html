@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="admin-bgcolor">
+<aside class="admin-head">
+  <p class="colum1"><a title="" href="index.html"><img alt="" src="images/return.png"/></a></p>
+  <p class="colum2">我的账户</p>
+  <p class="colum3"><a title="" href="index.html"><img alt="" src="images/admin.png"/></a></p>
+</aside>
+<section class="admin-list-box">
+ <a class="admin-list" title="实名认证" href="name-attest.html">
+      <p class="admin-list-colum1"><img alt="实名认证" src="images/name-attest.png" /></p>
+      <p class="admin-list-colum2">实名认证</p>
+      <p class="admin-list-colum3"><img alt="实名认证" src="images/admin-arrow.png"/></p>
+  </a> 
+  <a class="admin-list" title="修改绑定手机" href="phone-attest.html">
+      <p class="admin-list-colum1"><img alt="修改绑定手机" src="images/phone-attest.png" /></p>
+      <p class="admin-list-colum2">修改绑定手机</p>
+      <p class="admin-list-colum3"><img alt="修改绑定手机" src="images/admin-arrow.png"/></p>
+  </a>
+   <a class="admin-list" title="绑定邮箱" href="email-attest.html">
+      <p class="admin-list-colum1"><img alt="绑定邮箱" src="images/email-attest.png" /></p>
+      <p class="admin-list-colum2">绑定邮箱</p>
+      <p class="admin-list-colum3"><img alt="绑定邮箱" src="images/admin-arrow.png"/></p>
+  </a>
+  <!-- 若邮箱已认证，显示修改邮箱框 style="display: none;" -->
+   <a class="admin-list" title="修改绑定邮箱" href="edit-email-attest.html" style="display: none;">
+      <p class="admin-list-colum1"><img alt="修改绑定邮箱" src="images/email-attest.png" /></p>
+      <p class="admin-list-colum2">修改绑定邮箱</p>
+      <p class="admin-list-colum3"><img alt="修改绑定邮箱" src="images/admin-arrow.png"/></p>
+  </a> 
+   <a style="margin-top: 60px; border-top-style: solid; border-top-color: #c9c9c9;" class="admin-list" title="修改登录密码" href="edit-login-pass.html">
+      <p class="admin-list-colum1"><img alt="修改登录密码" src="images/edit-login-pass.png" /></p>
+      <p class="admin-list-colum2">修改登录密码</p>
+      <p class="admin-list-colum3"><img alt="修改登录密码" src="images/admin-arrow.png"/></p>
+  </a> 
+   <a class="admin-list" title="修改交易密码" href="edit-tran-pass.html">
+      <p class="admin-list-colum1"><img alt="修改交易密码" src="images/edit-tran-pass.png" /></p>
+      <p class="admin-list-colum2">修改交易密码</p>
+      <p class="admin-list-colum3"><img alt="修改交易密码" src="images/admin-arrow.png"/></p>
+  </a> 
+ </section>
+ 
+ <aside class="login-out"><a title="退出登录" href="index.html">退出登录</a></aside>
+ 
+ 
+</body>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>

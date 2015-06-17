@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="ry-reg-box">
+<div class="ry-safe-box">
+  <section class="ry-safe">
+    <aside class="ry-safe-tit"><a title="返回" href="index.html"><img alt="" src="images/return.png"/></a>找回密码</aside>
+    <form>
+      <div class="nav marg-t-25" id="nav">
+        <p class="set">手 机</p>
+        <ul class="new">
+          <li>手 机</li>
+          <li>邮 箱</li>
+        </ul>
+      </div>
+      
+      <div class="phone-box ">
+          <div class="phone marg-t-25">
+            <span>手机号</span><input type="text" value="">
+          </div>
+          <div class="phone code">
+              <span>验证码</span><input type="text" value="" /><a class="code-num" title="获取验证码" href="#">获取验证码</a>
+          </div>
+          <aside class="clb next"> <a title="下一步" href="set-pass.html">下一步</a> </aside>
+      </div>
+      <!-- 手机 邮箱 切换 hide -->
+      <div class="email-box hide">
+      	<div class="phone marg-t-25" style="padding-left:20px;">
+            <input type="text" value="请输入注册时使用的邮箱">
+          </div>
+          <aside class="clb next"> <a title="下一步" href="email-sure.html">下一步</a> </aside>
+      </div>
+   
+    </form>
+  </section>
+</div>
+</body>
+<script type="text/javascript">
+	$(function(){
+	
+		$(".nav p").click(function(){
+			var ul=$(".new");
+			if(ul.css("display")=="none"){
+				ul.slideDown();
+			}else{
+				ul.slideUp();
+			}
+		});
+		$(".nav li").click(function(){
+			var li=$(this).text();
+			$(".nav p").html(li);
+			$(".new").hide();
+			/*$(".set").css({background:'none'});*/
+			$("p").removeClass("select") ;   
+		});
+	})
+</script>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+<div class="ry-safe-box">
+  <section class="ry-safe">
+    <aside class="ry-safe-tit"><a title="返回" href="ry-safe.html"><img alt="" src="images/return.png"/></a>网站安全</aside>
+    <aside class="ry-safe-img"><img alt="" src="images/safepage.png" /></aside>
+    <div class="page-info safepage-info">
+      <p>睿银平台运用先进的安全技术保护用户在睿银平台账户中存储的个人信息、账户信息以及交易记录的安全。拥有完善的安全监测系统，可以及时的发现网站的非正常访问并做出相应的安全相应。</p>
+      <ul>
+      	<li>支持安全套接层协议和256位加密技术；</li>
+        <li>全方位主动备份技术；</li>
+        <li>第三方支付平台确保资金和交易数据安全；</li>
+        <li>先进存储机制确保影响和合同文件数据安全；</li>
+        <li>线上360度数据尽调。</li>
+      </ul>
+    </div>
+  </section>
+</div>
+</body>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>

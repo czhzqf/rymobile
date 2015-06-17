@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+<div class="ry-safe-box">
+  <section class="ry-safe">
+    <aside class="ry-safe-tit"><a title="返回" href="ry-safe.html"><img alt="" src="images/return.png"/></a>安全保障</aside>
+    <aside class="ry-safe-img"><img alt="" src="images/mortgage.png" /></aside>
+    <aside class="page-title">资产抵押</aside>
+    <div class="page-info">
+      <p>为保障投资者的资产安全，睿银目前所有业务都是组织实物抵押的方式来进行贷款，包括事前充分的尽职调查，以及资产评估。以信贷的方式对借款人进行严格审核，包括真实负债率，企业经营情况，所属行业，贷款目的，还款来源。严格把控风险。</p>
+      <aside>车辆抵押</aside>
+      <p>目前主要专注于车辆抵押或汽车登记抵押，车辆有快速变现能力，并且符合银监会对P2P的要求，小而分散，可保障投资者的本息安全。</p>
+      <aside>房产抵押</aside>
+      <p>目前主要做银行赎楼和优质拥有房产的客户，为避免房产下行趋势。</p>
+    </div>
+  </section>
+</div>
+</body>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>

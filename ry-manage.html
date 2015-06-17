@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+<div class="ry-safe-box">
+  <section class="ry-safe">
+    <aside class="ry-safe-tit"><a title="返回" href="ry-safe.html"><img alt="" src="images/return.png"/></a>贷后管理体系</aside>
+    <aside class="ry-safe-img"><img alt="" src="images/manage.png" /></aside>
+    <div class="page-info">
+      <aside>成熟的贷后管理体系</aside>
+      <p>对于借款客户的即时跟进，严格的管理，从贷中跟踪，贷后管理及催收保障投资者的利益。</p>
+      
+    </div>
+  </section>
+</div>
+</body>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>

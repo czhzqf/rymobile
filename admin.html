@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="admin-bgcolor">
+<aside class="admin-head">
+  <p class="colum1"><a title="" href="index.html"><img alt="" src="images/return.png"/></a></p>
+  <p class="colum2">我的账户</p>
+  <p class="colum3"><a title="" href="index.html"><img alt="" src="images/admin.png"/></a></p>
+</aside>
+<section class="admin-income">
+  <aside class="yesterday-income">
+    <p class="yesterday-ico">昨日收益（元）</p>
+    <p class="font-68">0.00</p>
+  </aside>
+  <aside class="total-income">
+    <p class="total-income-colum1"><span>累计收益（元）</span><span>0.97</span></p>
+    <p><span>在投资金（元）</span><span>1000.00</span></p>
+  </aside>
+</section>
+ <section class="admin-list-box">
+     <a class="admin-list" title="账户余额">
+          <p class="admin-list-colum1"><img alt="账户余额" src="images/balance.png" /></p>
+          <p class="balance-list-colum2">账户余额</p>
+          <p class="balance-list-colum3">1000.97</p>
+      </a> 
+
+     <a class="admin-list" title="交易记录" href="record.html">
+          <p class="admin-list-colum1"><img alt="交易记录" src="images/record.png" /></p>
+          <p class="admin-list-colum2">交易记录</p>
+          <p class="admin-list-colum3"><img alt="交易记录" src="images/admin-arrow.png"/></p>
+      </a> 
+
+     <a class="admin-list" title="我的银行卡" href="bank.html">
+          <p class="admin-list-colum1"><img alt="我的银行卡" src="images/bank.png" /></p>
+          <p class="admin-list-colum2">我的银行卡</p>
+          <p class="admin-list-colum3"><img alt="我的银行卡" src="images/admin-arrow.png"/></p>
+      </a>
+      <a class="admin-list" title="我的礼券" href="gift.html">
+          <p class="admin-list-colum1"><img alt="我的礼券" src="images/gift.png" /></p>
+          <p class="gift-list-colum2">我的礼券</p>
+          <p class="gift-num">1000</p>
+          <p class="admin-list-colum3"><img alt="我的礼券" src="images/admin-arrow.png"/></p>
+      </a>
+      <a class="admin-list" title="更多..." href="attest.html">
+          <p class="admin-list-colum1"><img alt="更多..." src="images/more.png" /></p>
+          <p class="admin-list-colum2">更多...</p>
+          <p class="admin-list-colum3"><img alt="更多..." src="images/admin-arrow.png"/></p>
+      </a>
+       
+  </section>
+  
+</body>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>

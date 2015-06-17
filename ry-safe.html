@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+	<div class="ry-safe-box">
+        <section class="ry-safe">
+            <aside class="ry-safe-tit"><a title="返回" href="index.html"><img alt="" src="images/return.png"/></a>安全保障</aside>
+       	    <aside class="ry-safe-img"><img alt="" src="images/safe-img.png" /></aside>
+            <aside class="arrow"><div></div></aside>
+            <aside class="ry-safe-list">
+            	<a title="资产抵押" href="ry-mortgage.html">
+                	<div class="ry-safe-list-colum1"><img alt="资产抵押" src="images/safe-ico1.png" /></div>
+                    <div class="ry-safe-list-colum2">
+                    	<p>资产抵押</p>
+                        <span>目前所有业务都是以实物抵押的形式进行......</span>
+                    </div>
+                    <div class="ry-safe-list-colum1 ry-safe-list-colum3"><img alt="资产抵押" src="images/safe-btn.png"/></div>
+                </a>
+                <a title="风险控制" href="ry-control.html">
+                	<div class="ry-safe-list-colum1"><img alt="风险控制" src="images/safe-ico2.png" /></div>
+                    <div class="ry-safe-list-colum2">
+                    	<p>风险控制</p>
+                        <span>准入门槛；实地考察；专业团队。</span>
+                    </div>
+                    <div class="ry-safe-list-colum1 ry-safe-list-colum3"><img alt="风险控制" src="images/safe-btn.png"/></div>
+                </a>
+                <a title="三重保障制度" href="ry-ensure.html">
+                	<div class="ry-safe-list-colum1"><img alt="三重保障制度" src="images/safe-ico3.png" /></div>
+                    <div class="ry-safe-list-colum2">
+                    	<p>三重保障制度</p>
+                        <span>本金保障；法律保障；第三方资金托管。</span>
+                    </div>
+                    <div class="ry-safe-list-colum1 ry-safe-list-colum3"><img alt="三重保障制度" src="images/safe-btn.png"/></div>
+                </a>
+                <a title="成熟的贷后管理体系" href="ry-manage.html">
+                	<div class="ry-safe-list-colum1"><img alt="成熟的贷后管理体系" src="images/safe-ico4.png" /></div>
+                    <div class="ry-safe-list-colum2">
+                    	<p>成熟的贷后管理体系</p>
+                        <span>对借款客户的即时跟进，严格的管理......</span>
+                    </div>
+                    <div class="ry-safe-list-colum1 ry-safe-list-colum3"><img alt="成熟的贷后管理体系" src="images/safe-btn.png"/></div>
+                </a>
+                <a title="网站安全" href="ry-safepage.html">
+                	<div class="ry-safe-list-colum1"><img alt="网站安全" src="images/safe-ico5.png" /></div>
+                    <div class="ry-safe-list-colum2">
+                    	<p>网站安全</p>
+                        <span>运用先进的安全技术保护用户在睿银......</span>
+                    </div>
+                    <div class="ry-safe-list-colum1 ry-safe-list-colum3"><img alt="网站安全" src="images/safe-btn.png"/></div>
+                </a>
+            </aside>
+        </section>
+        
+    </div>
+
+</body>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>

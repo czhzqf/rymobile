@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="admin-bgcolor">
+<aside class="admin-head">
+  <p class="colum1"><a title="" href="admin.html"><img alt="" src="images/return.png"/></a></p>
+  <p class="colum2">我的礼券</p>
+</aside>
+<div class="gift-box">
+  <div class="vtitle">
+    <p class="colum1"><span>0.5</span>%</p>
+    <p class="colum2">加息券</br>
+      <span>2015.05.11-2015.05.30</span></p>
+     <em class="v v02"></em> </div>
+  <div class="vcon clb">
+    <ul class="vconlist">
+      <li class="select"><a class="tit" href="javascript:;">使用规则：</a></li>
+      <li><a href="javascript:;">1. 必须是在中奖后投月标才可以使用，单标使用最高限额2万，</a></li>
+      <li><a href="javascript:;">2. 只能加息计算一次，加息券有限期为45天.</a></li>
+    </ul>
+  </div>
+  <div class="vtitle">
+    <p class="colum1"><span>0.5</span>%</p>
+    <p class="colum2">加息券</br>
+      <span>2015.05.11-2015.05.30</span></p>
+    <em class="v v02"></em> </div>
+  <div class="vcon clb" style="display: none;">
+    <ul class="vconlist">
+      <li class="select"><a class="tit" href="javascript:;">使用规则：</a></li>
+      <li><a href="javascript:;">1. 必须是在中奖后投月标才可以使用，单标使用最高限额2万，</a></li>
+      <li><a href="javascript:;">2. 只能加息计算一次，加息券有限期为45天.</a></li>
+    </ul>
+  </div>
+  <div class="vtitle">
+    <p class="colum1"><span>0.5</span>%</p>
+    <p class="colum2">加息券</br>
+      <span>2015.05.11-2015.05.30</span></p>
+    <em class="v v02"></em> </div>
+  <div class="vcon clb" style="display: none;">
+    <ul class="vconlist">
+      <li class="select"><a class="tit" href="javascript:;">使用规则：</a></li>
+      <li><a href="javascript:;">1. 必须是在中奖后投月标才可以使用，单标使用最高限额2万，</a></li>
+      <li><a href="javascript:;">2. 只能加息计算一次，加息券有限期为45天.</a></li>
+    </ul>
+  </div>
+  <div class="vtitle vtitle-red">
+    <p class="colum1"><span>1.0</span>%</p>
+    <p class="colum2">加息券</br>
+      <span>2015.05.11-2015.05.30</span></p>
+    <em class="v v02"></em> </div>
+  <div class="vcon clb" style="display: none;">
+    <ul class="vconlist">
+      <li class="select"><a class="tit" href="javascript:;">使用规则：</a></li>
+      <li><a href="javascript:;">1. 必须是在中奖后投月标才可以使用，单标使用最高限额2万，</a></li>
+      <li><a href="javascript:;">2. 只能加息计算一次，加息券有限期为45天.</a></li>
+    </ul>
+  </div>
+  <div class="vtitle vtitle-red">
+    <p class="colum1"><span>1.0</span>%</p>
+    <p class="colum2">加息券</br>
+      <span>2015.05.11-2015.05.30</span></p>
+    <em class="v v02"></em> </div>
+  <div class="vcon clb" style="display: none;">
+    <ul class="vconlist">
+      <li class="select"><a class="tit" href="javascript:;">使用规则：</a></li>
+      <li><a href="javascript:;">1. 必须是在中奖后投月标才可以使用，单标使用最高限额2万，</a></li>
+      <li><a href="javascript:;">2. 只能加息计算一次，加息券有限期为45天.</a></li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){
+	//菜单隐藏展开
+	var tabs_i=0
+	$('.vtitle').click(function(){
+		var _self = $(this);
+		var j = $('.vtitle').index(_self);
+		if( tabs_i == j ) return false; tabs_i = j;
+		$('.vtitle em').each(function(e){
+			if(e==tabs_i){
+				$('em',_self).removeClass('v01').addClass('v02');
+			}else{
+				$(this).removeClass('v02').addClass('v01');
+			}
+		});
+		$('.vcon').slideUp().eq(tabs_i).slideDown();
+	});
+})
+</script>
+</body>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>

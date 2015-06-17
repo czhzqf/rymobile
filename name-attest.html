@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>睿银财富</title>
+<link rel="stylesheet" type="text/css" href="css/rymobile.css">
+<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body class="ry-reg-box">
+<div class="ry-safe-box">
+  <section class="ry-safe">
+    <aside class="ry-safe-tit"><a title="返回" href="admin.html"><img alt="" src="images/return.png"/></a>实名认证</aside>
+    <form>
+    	<div class="name-attest-tit">请务必使用真实的身份信息，否则可能导致无法购买提现等操作。</div>
+      <div class="reg2-text">
+        <span>真实姓名</span><input type="text" value=""><em>请输入您的真实姓名</em>
+      </div>
+      <div class="reg2-text marg-t-25">
+        <span>身份证号</span><input type="text" value=""><em>请输入您的身份证号</em>
+      </div>
+      <aside class="clb next"> <a title="立即验证" href="admin.html">立即验证</a> </aside>
+    </form>
+  </section>
+</div>
+</body>
+<script type="text/javascript">
+    var autoScale = function () {
+        setTimeout(function() {
+            var winW = $(window).width();
+            var scale = (winW/640).toString().substring(0, 6);
+            //var cssText = '-webkit-transform: scale('+ scale +');-webkit-transform-origin: 0 0';
+            var cssText = 'zoom:'+ scale +';';
+            $('body').attr('style', cssText);
+        }, 300);
+    };
+    autoScale();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale , false); //切换横竖屏
+</script>
+</html>
